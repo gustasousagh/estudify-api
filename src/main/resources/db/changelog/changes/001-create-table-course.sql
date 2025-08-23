@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS course (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id VARCHAR(255) NOT NULL,
+    course_title VARCHAR(255) NOT NULL,
+    course_description TEXT,
+    course_total_modules INT UNSIGNED NOT NULL DEFAULT 0,
+    course_image_url VARCHAR(512),
+    complete boolean NOT NULL DEFAULT false,
+    type varchar(20) NOT NULL DEFAULT 'COURSE',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

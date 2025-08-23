@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20250808-0038
+      author: gustasousagh
+      comment: Creating course table
+      changes:
+        - sqlFile:
+            path: changes/001-create-table-course.sql
+            splitStatements: true
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 20250808-1016
+      author: gustasousagh
+      comment: Creating collaborators table
+      changes:
+        - sqlFile:
+            path: changes/002-create-table-course_topic.sql
+            splitStatements: true
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 20250820-2248
+      author: gustasousagh
+      comment: Creating subscription table
+      changes:
+        - sqlFile:
+            path: changes/003-create-subscription-table.sql
+            splitStatements: true
+            relativeToChangelogFile: true
