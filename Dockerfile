@@ -10,6 +10,8 @@ WORKDIR /app
 COPY build.gradle settings.gradle gradlew ./
 COPY gradle ./gradle
 
+RUN chmod +x gradlew
+
 # Baixa as dependências
 RUN ./gradlew build -x test --no-daemon || return 0
 
