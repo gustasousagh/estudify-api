@@ -1,7 +1,7 @@
 # ============================
 # Etapa 1: build da aplicação
 # ============================
-FROM openjdk:24-ea-jdk AS builder
+FROM gradle:8.10.2-jdk21 AS builder
 
 # Define diretório de trabalho
 WORKDIR /app
