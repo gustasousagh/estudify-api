@@ -6,9 +6,9 @@ spring:
     web-application-type: reactive
 
   datasource:
-    url: "${DB_URL:jdbc:mysql://localhost:3306/estudify?useUnicode=true&characterEncoding=utf8&connectionCollation=utf8mb4_unicode_ci&rewriteBatchedStatements=true&cachePrepStmts=true&prepStmtCacheSize=256&prepStmtCacheSqlLimit=2048}"
+    url: "jdbc:mysql://66.94.122.246:3306/studify?allowPublicKeyRetrieval=true&parseTime=true&loc=Local"
     username: "${DB_USERNAME:root}"
-    password: "${DB_PASSWORD:root}"
+    password: "${DB_PASSWORD:Playhack1.}"
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 20
