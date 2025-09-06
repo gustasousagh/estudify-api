@@ -3,17 +3,16 @@
 # ============================
 FROM gradle:8.10.2-jdk21 AS builder
 
-# Define diretório de trabalho
 WORKDIR /app
 
-RUN chmod +x gradlew
 # Copia os arquivos de configuração primeiro (cache eficiente)
 COPY build.gradle settings.gradle gradlew ./
 COPY gradle ./gradle
 
+# Dá permissão de execução ao gradlew
+RUN chmod +x gradlew
 
-
-# Baixa as dependências
+# Baixa as dependências (ignora testes para cachear dependências)
 RUN ./gradlew build -x test --no-daemon || return 0
 
 # Copia o código da aplicação
